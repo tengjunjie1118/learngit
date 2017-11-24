@@ -34,9 +34,12 @@ POST api/notify/message
 返回数据格式：
 
 ```
-  {   success:bool(true/false),//表示是否成功
+  {   
+     data：null  //返回的数据
      code:0/1 ,//执行结果编码，目前只有0成功，1失败
      msg:string //服务器返回的提示信息，一般在访问失败时给出。
+     level：none //错误级别，一般会在访问失败时给出。
+     isSuccess:bool(true/false),//表示是否成功
   }
 ```
 ### 1.1.2 当前消息请求转发Ihaier
@@ -61,9 +64,12 @@ POST api/notify/message
 返回数据格式：
 
 ```
-  {   success:bool(true/false),//表示是否成功
+    {   
+     data：null  //返回的数据
      code:0/1 ,//执行结果编码，目前只有0成功，1失败
      msg:string //服务器返回的提示信息，一般在访问失败时给出。
+     level：none //错误级别，一般会在访问失败时给出。
+     isSuccess:bool(true/false),//表示是否成功
   }
 ```
  
