@@ -20,7 +20,7 @@
 POST api/notify/message
 {
        
-	    "subject":"告警测试",
+     "subject":"告警测试",
      "targets":["01463841","01430948"],
      "content":"内存告警",
      "messageType":"2
