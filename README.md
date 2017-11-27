@@ -18,6 +18,7 @@
 //subject:消息主题,targets:目标工号（可以多个，多个用逗号隔开),content:消息内容，messageType：消息类型(1表示既发送邮箱也发送Ihaier,2表示只发送邮箱，3表示只发送Ihaier)
 POST api/notify/message
 {
+     //以参数的形式请求
      subject: 某某系统告警
      targets:a0006476
      content:内存告警
@@ -49,6 +50,7 @@ POST api/notify/message
 //subject:消息主题,targets:目标工号（可以多个，多个用逗号隔开),content:消息内容，messageType：消息类型(1表示既发送邮箱也发送Ihaier,2表示只发送邮箱，3表示只发送Ihaier)
 POST api/notify/message
 {
+     //以参数的形式请求
      subject: 某某系统告警
      targets:a0006476
      content:内存告警
