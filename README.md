@@ -16,14 +16,14 @@
 当前告警信息转发邮箱，具体请求格式如下：
  
 ```
-//subject:消息主题,targets:目标工号（可以多个，多个用逗号隔开),content:消息内容，messageType：消息类型(1表示既发送邮箱也发送Ihaier,2表示只发送邮箱，3表示只发送Ihaier)
+//subject:消息主题,targets:目标工号,content:消息内容，messageType：消息类型(1表示既发送邮箱也发送Ihaier,2表示只发送邮箱，3表示只发送Ihaier)
 POST api/notify/message
 {
-     //以参数的形式请求
-     subject: 某某系统告警
-     targets:a0006476
-     content:内存告警
-     messageType:2
+       
+	    "subject":"告警测试",
+     "targets":["01463841","01430948"],
+     "content":"内存告警",
+     "messageType":"2
  }
 ```
 返回数据格式：
@@ -48,14 +48,14 @@ POST api/notify/message
 ### 1.1.2 当前消息请求转发Ihaier
 当前告警信息转发Ihaier，具体请求格式如下：
 ```
-//subject:消息主题,targets:目标工号（可以多个，多个用逗号隔开),content:消息内容，messageType：消息类型(1表示既发送邮箱也发送Ihaier,2表示只发送邮箱，3表示只发送Ihaier)
+//subject:消息主题,targets:目标工号,content:消息内容，messageType：消息类型(1表示既发送邮箱也发送Ihaier,2表示只发送邮箱，3表示只发送Ihaier)
 POST api/notify/message
 {
-     //以参数的形式请求
-     subject: 某某系统告警
-     targets:a0006476
-     content:内存告警
-     messageType:3
+       
+	    "subject":"告警测试",
+     "targets":["01463841","01430948"],
+     "content":"内存告警",
+     "messageType":"3
  }
 ```
 返回数据格式：
@@ -80,14 +80,14 @@ POST api/notify/message
 ### 1.1.3 当前消息既转发Ihaier又转发邮箱
 当前告警信息同时发送邮箱和Ihaier，具体请求格式如下：
 ```
-//subject:消息主题,targets:目标工号（可以多个，多个用逗号隔开),content:消息内容，messageType：消息类型(1表示既发送邮箱也发送Ihaier,2表示只发送邮箱，3表示只发送Ihaier)
+//subject:消息主题,targets:目标工号,content:消息内容，messageType：消息类型(1表示既发送邮箱也发送Ihaier,2表示只发送邮箱，3表示只发送Ihaier)
 POST api/notify/message
 {
-     //以参数的形式请求
-     subject: 某某系统告警
-     targets:a0006476
-     content:内存告警
-     messageType:1
+       
+	    "subject":"告警测试",
+     "targets":["01463841","01430948"],
+     "content":"内存告警",
+     "messageType":"1
  }
 ```
 返回数据格式：
