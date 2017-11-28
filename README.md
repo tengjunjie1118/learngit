@@ -80,8 +80,8 @@ POST api/notify/message?asynchronismType=0
 ### 1.1.3 当前消息既转发Ihaier又转发邮箱
 当前告警信息同时发送邮箱和Ihaier，具体请求格式如下：
 ```
-//subject:消息主题,targets:目标工号,content:消息内容，messageType：消息类型(1表示既发送邮箱也发送Ihaier,2表示只发送邮箱，3表示只发送Ihaier)
-POST api/notify/message
+//subject:消息主题,targets:目标工号,content:消息内容，messageType：消息类型(1表示既发送邮箱也发送Ihaier,2表示只发送邮箱，3表示只发送Ihaier)，asynchronismType参数表示消息是同步发送还是异步发送，0代表同步发送，1代表异步发送。
+POST api/notify/message?asynchronismType=0
 {
        
      "subject":"告警测试",
