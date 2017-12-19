@@ -160,4 +160,35 @@ POST api/notify/send
     "isSuccess": false //表示失败
 }
 ```
+### 2.1.2 查询告警信息
+得到告警信息列表，具体请求格式如下：
+ 
+```
+//currentPage:当前页,pageSize:一页显示多少条数据,project:项目名称
+POST api/notify/searchnotify
+{
+     "currentPage":"1",
+     "pageSize":"10",
+     "project":"HLHT"
+}
+```
+返回数据格式：
+
+```
+  {   
+     data:list,  //返回的数据,一个list集合
+     code:0,//执行结果编码，目前只有0成功，1失败
+     msg:"请求成功", //服务器返回的提示信息
+     level："none", //错误级别
+     isSuccess:true //表示成功
+  }
+  或者
+  {
+    "data": null,//返回的数据
+    "code": 1,//执行结果编码，目前只有0成功，1失败
+    "msg": "异常信息",//服务器返回的提示信息，一般在访问失败时给出。
+    "level": "none",//错误级别
+    "isSuccess": false //表示失败
+}
+```
 
